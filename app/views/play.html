@@ -1,0 +1,11 @@
+<main class="container"> 
+    <h1 class="text-center">{{playcontroller.word|uppercase|toStar:playcontroller.letters}}</h1>
+    <hr />
+    <form name="playcontroller.formLetter" novalidate ng-submit="playcontroller.addLetter()">
+        <div class="form-group">
+            <input name="" class="form-control" ng-model="playcontroller.letter" ng-required="true" ng-minlength="1" ng-maxlength="1">
+        </div>
+        <input class="btn btn-default pull-right" type="submit" value="Check" ng-disabled="!playcontroller.formLetter.$valid">
+    </form>
+
+</main>

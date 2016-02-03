@@ -1,0 +1,9 @@
+<main class="container"> 
+    <ul class="list-group">
+    <a ng-repeat="word in wordListController.words track by $index" class="list-group-item" ng-href="/#/play/{{word.id}}">
+        {{word.id}}  : 
+        {{word.word|toStar:[]}}  <small>({{word.word}}-{{word.email}})</small>   
+        <span class="glyphicon glyphicon-remove pull-right"  ng-click="wordListController.deleteWord(word.id)"></span>
+    </a>
+    </ul>
+</main>

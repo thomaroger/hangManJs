@@ -1,0 +1,6 @@
+ <form name="wordController.userForm" ng-submit="wordController.addWord()" novalidate>
+    <div class="form-group">
+        <input type="text" class="form-control"  ng-model='wordController.word.name' ng-required="true">
+    </div>
+    <input class="btn btn-default pull-right" type="submit" value="Add" ng-disabled="!wordController.userForm.$valid">
+</form>
